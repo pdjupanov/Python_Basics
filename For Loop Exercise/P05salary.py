@@ -3,23 +3,25 @@ import sys
 opened_tabs = int(input())
 salary = int(input())
 
-penalty_price = 0
-remaining_salary = 0
+penalty = 0
 
-for _ in range(opened_tabs):
+for site in range(opened_tabs):
     site_name = input()
+
     if site_name == "Facebook":
-        penalty_price -= 150
+        penalty = 150
+        salary -= penalty
     elif site_name == "Instagram":
-        penalty_price -= 100
+        penalty = 100
+        salary -= penalty
     elif site_name == "Reddit":
-        penalty_price -= 50
+        fine = 50
+        salary -= penalty
 
     if salary <= 0:
         print("You have lost your salary.")
         break
 
+print(salary)
 
-if remaining_salary > 0:
-    print(remaining_salary)
 
